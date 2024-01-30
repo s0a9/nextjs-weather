@@ -21,7 +21,7 @@ async function Search(e, location, setCurrentData) {
   const api = "6d3f5b06015347b598d95409242901";
 
   const currRes = await fetch(
-    `${URL}forecast.json?key=${api}&q=${location}&days=3&aqi=no&alerts=no`
+    `${URL}forecast.json?key=${process.env.API_KEY}&q=${location}&days=3&aqi=no&alerts=no`
   )
     .then((res) => res.json())
     .then((data) => data);
